@@ -1,0 +1,1 @@
+ObserverDP içerisinde ayrýca CQRS yapýsýyla dapper  CRUD iþlemleri gerçekleþtirilmiþtir.
