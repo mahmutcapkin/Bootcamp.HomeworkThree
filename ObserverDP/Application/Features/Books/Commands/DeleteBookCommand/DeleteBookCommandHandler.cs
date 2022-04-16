@@ -13,7 +13,7 @@ namespace Application.Features.Books.Commands.DeleteBookCommand
         private readonly IBookRepository _bookRepository;
         BookBusinessRules _bookBusinessRules;
 
-        public DeleteBookCommandHandler(IMapper mapper, IUnitOfWork unitOfWork, IBookRepository bookRepository, BookBusinessRules bookBusinessRules)
+        public DeleteBookCommandHandler(IMapper mapper, IBookRepository bookRepository, BookBusinessRules bookBusinessRules)
         {
             _mapper = mapper;
             _bookBusinessRules = bookBusinessRules;

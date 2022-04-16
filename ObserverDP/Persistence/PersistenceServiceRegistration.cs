@@ -13,18 +13,7 @@ namespace Persistence
         {
             services.AddScoped<IDbConnection>(sp => new NpgsqlConnection(configuration.GetConnectionString("Postgresql")));
 
-            services.AddScoped<IDbTransaction>(sp =>
-            {
-
-                var connection = sp.GetRequiredService<IDbConnection>();
-                connection.Open();
-                return connection.BeginTransaction();
-
-
-            });
-
             services.AddScoped<IBookRepository, BookRepository>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             return services;
         }

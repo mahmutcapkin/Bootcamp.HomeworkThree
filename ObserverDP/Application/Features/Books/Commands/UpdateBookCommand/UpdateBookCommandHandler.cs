@@ -13,7 +13,7 @@ namespace Application.Features.Books.Commands.UpdateBookCommand
         private readonly IBookRepository _bookRepository;
         BookBusinessRules _bookBusinessRules;
 
-        public UpdateBookCommandHandler(IMapper mapper, IUnitOfWork unitOfWork, IBookRepository bookRepository, BookBusinessRules bookBusinessRules)
+        public UpdateBookCommandHandler(IMapper mapper, IBookRepository bookRepository, BookBusinessRules bookBusinessRules)
         {
             _mapper = mapper;
             _bookBusinessRules = bookBusinessRules;
